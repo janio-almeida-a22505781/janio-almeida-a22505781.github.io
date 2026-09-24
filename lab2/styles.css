@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  background-color: #e8f1ed;
+  color: #243447;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.6;
+}
+
+header {
+  padding: 1.5rem;
+  background-color: #2f6b4f;
+  color: #ffffff;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  padding: 1rem;
+  background-color: #17221c;
+}
+
+nav a {
+  margin: 0 0.5rem;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+main {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+}
+
+main > img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+.fotografias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fotografias img {
+  width: 120px;
+  height: 80px;
+  margin: 0;
+  object-fit: cover;
+}
+
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.6rem;
+  border: 1px solid #9ab5a5;
+  text-align: left;
+}
+
+th {
+  background-color: #2f6b4f;
+  color: #ffffff;
+}
+
+td {
+  color: #243447;
+}
+
+iframe {
+  max-width: 100%;
+  border: 0;
+}
+
+.poema p:nth-child(odd) {
+  color: #174a5b;
+}
+
+.poema p:nth-child(even) {
+  color: #c2542d;
+}
+
+footer {
+  padding: 1rem;
+  background-color: #17221c;
+  color: #ffffff;
+  text-align: center;
+}
