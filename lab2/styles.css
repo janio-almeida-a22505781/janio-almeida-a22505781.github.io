@@ -9,7 +9,7 @@ body {
 header {
   padding: 1.5rem;
   background-color: #2f6b4f;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
 }
 
@@ -24,7 +24,7 @@ nav {
 
 nav a {
   margin: 0 0.5rem;
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -32,7 +32,7 @@ main {
   max-width: 800px;
   margin: 2rem auto;
   padding: 2rem;
-  background-color: #ffffff;
+  background-color: #fff;
 }
 
 main > img {
@@ -73,7 +73,7 @@ td {
 
 th {
   background-color: #2f6b4f;
-  color: #ffffff;
+  color: #fff;
 }
 
 td {
@@ -96,6 +96,6 @@ iframe {
 footer {
   padding: 1rem;
   background-color: #17221c;
-  color: #ffffff;
+  color: #fff;
   text-align: center;
 }
