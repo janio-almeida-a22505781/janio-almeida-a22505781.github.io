@@ -1,0 +1,18 @@
+# Dependencias e artefatos locais
+node_modules/
+npm-debug.log*
+
+# Configuracao local de desenvolvimento
+package.json
+package-lock.json
+.htmlvalidate.json
+.prettierrc.json
+.stylelintrc.json
+.vscode/
+.devcontainer/
+AGENTS.md
+
+# Saidas e arquivos temporarios
+coverage/
+.cache/
+*.log
