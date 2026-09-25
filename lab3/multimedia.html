@@ -6,7 +6,7 @@
     <title>Multimédia de Aracaju</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="pagina-multimedia">
     <header>
       <h1>Aracaju</h1>
       <nav aria-label="Navegação principal">
@@ -25,11 +25,18 @@
       </p>
       <nav aria-label="Navegação da página">
         <a href="#fotografias">Fotografias</a>
+        <a href="#video-background">Vídeo background</a>
         <a href="#video">Vídeo</a>
         <a href="#poesia">Poesia</a>
+        <a href="#parallax">Parallax</a>
       </nav>
 
-      <section>
+      <section id="destaque" class="destaque">
+        <img src="images/beiramar.jpg" alt="Praia de Aracaju" />
+        <p class="frase-destaque">Aracaju: onde o rio encontra o mar.</p>
+      </section>
+
+      <section class="media-section fotos-section">
         <h3 id="fotografias">Fotografias</h3>
         <div class="fotografias">
           <img src="images/alfandega.jpg" alt="Antiga alfândega de Aracaju" />
@@ -43,9 +50,31 @@
         </div>
       </section>
 
-      <section>
+      <section id="video-background" class="video-background-section">
+        <video
+          class="video-background"
+          autoplay
+          muted
+          loop
+          playsinline
+          poster="images/beiramar.jpg"
+          aria-label="Vídeo de natureza em movimento"
+        >
+          <source
+            src="https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4"
+            type="video/mp4"
+          />
+        </video>
+        <div class="video-background-content">
+          <h3>Aracaju em movimento</h3>
+          <p>Uma cidade para observar, sentir e descobrir.</p>
+        </div>
+      </section>
+
+      <section class="media-section video-section">
         <h3 id="video">Vídeo</h3>
         <iframe
+          class="video-frame"
           width="560"
           height="315"
           src="https://www.youtube.com/embed/QOHEVzRI22A?si=4RpM_8rbYfjqRGk5"
@@ -64,13 +93,20 @@
         ></iframe>
       </section>
 
-      <section>
+      <section class="media-section poesia-section">
         <h3 id="poesia">Poesia</h3>
         <div class="poema">
           <p>Aracaju, cidade de mar e luz,</p>
           <p>Onde o rio encontra o céu azul,</p>
           <p>Nas tuas praias mora a calma,</p>
           <p>E Sergipe vive em tua alma.</p>
+        </div>
+      </section>
+
+      <section id="parallax" class="parallax-section">
+        <div class="parallax-content">
+          <h3>Entre o rio e o mar</h3>
+          <p>As paisagens de Aracaju mudam com a luz, a maré e o movimento da cidade.</p>
         </div>
       </section>
     </main>

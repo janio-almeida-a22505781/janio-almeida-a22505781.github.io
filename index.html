@@ -2,46 +2,81 @@
 <html lang="pt">
   <head>
     <meta charset="utf-8" />
-    <title>Primeira Página</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Janio Almeida | Desenvolvimento Web</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
-      <h1>Primeira Página Web!</h1>
-      <nav>
-        <ul>
-          <li><a href="lab1/index.html">Lab 1</a></li>
-          <li><a href="lab2/index.html">Lab 2</a></li>
-        </ul>
-      </nav>
-    </header>
-
     <main>
-      <p>Eis a minha primeira página Web!</p>
-      <p>
-        Na Unidade Curricular de
-        <a
-          href="https://moodle.ensinolusofona.pt/course/view.php?id=11232"
-          target="_blank"
-        >
-          Desenvolvimento de Interfaces Web
-        </a>
-        abordaremos as seguintes tecnologias Web &#127760;:
-      </p>
+      <section id="inicio" class="hero">
+        <nav aria-label="Navegação principal">
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#disciplina">Interfaces Web</a></li>
+            <li><a href="tutoriais.html">Tutoriais</a></li>
+          </ul>
+        </nav>
 
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>React e Next.js</li>
-      </ul>
+        <div class="hero-content">
+          <p class="eyebrow">DESENVOLVIMENTO WEB · CRIATIVIDADE · APRENDIZAGEM</p>
+          <h1>Ideias simples podem criar experiências marcantes.</h1>
+          <p>
+            Um espaço para apresentar os meus exercícios e projetos de Desenvolvimento de Interfaces
+            Web.
+          </p>
+          <a class="cta" href="#projetos">Explorar projetos</a>
+        </div>
+      </section>
 
-      <p>Iremos criar soluções criativas!</p>
-      <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web" />
+      <section id="projetos" class="projetos">
+        <div class="section-heading">
+          <p class="eyebrow">TRABALHO EM PROGRESSO</p>
+          <h2>Projetos e laboratórios</h2>
+          <p>
+            Uma coleção de exercícios onde cada página representa uma nova experiência com a Web.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card">
+            <p class="project-number">01</p>
+            <h3>Laboratório 1</h3>
+            <p>Primeiras páginas, navegação e apresentação da cidade.</p>
+            <a href="lab1/index.html">Ver laboratório</a>
+          </article>
+          <article class="project-card featured">
+            <p class="project-number">02</p>
+            <h3>Laboratório 2</h3>
+            <p>Aracaju em páginas com localização, tabela e multimédia.</p>
+            <a href="lab2/index.html">Ver laboratório</a>
+          </article>
+          <article class="project-card">
+            <p class="project-number">03</p>
+            <h3>Laboratório 3</h3>
+            <p>Uma nova etapa para explorar layouts responsivos.</p>
+            <a href="lab3/index.html">Ver laboratório</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="disciplina" class="disciplina">
+        <div class="discipline-copy">
+          <p class="eyebrow">UNIDADE CURRICULAR</p>
+          <h2>Desenvolvimento de Interfaces Web</h2>
+          <p>Aprendemos a criar soluções para a Web com HTML, CSS, JavaScript, React e Next.js.</p>
+          <a
+            class="text-link"
+            href="https://moodle.ensinolusofona.pt/course/view.php?id=11232"
+            target="_blank"
+          >
+            Visitar o Moodle
+          </a>
+        </div>
+        <div class="discipline-image">
+          <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web" />
+        </div>
+      </section>
     </main>
-
-    <footer>
-      <p>Universidade Lusófona © 2025</p>
-    </footer>
   </body>
 </html>
