@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body class="pagina-multimedia">
+    <!-- [ESTRUTURA] Cabecalho com titulo e links para as paginas do site. -->
     <header>
       <h1>Aracaju</h1>
+      <!-- [NAVEGACAO] Links entre paginas; aria-label distingue este menu dos links internos. -->
       <nav aria-label="Navegação principal">
         <a href="index.html">Início</a>
         <a href="info.html">Info</a>
@@ -23,6 +25,7 @@
         Aracaju tem praias, parques e paisagens que podem ser apresentados através de fotografias e
         vídeos.
       </p>
+      <!-- [NAVEGACAO-ANCORA] O fragmento href corresponde ao id da secao de destino. -->
       <nav aria-label="Navegação da página">
         <a href="#fotografias">Fotografias</a>
         <a href="#video-background">Vídeo background</a>
@@ -31,6 +34,7 @@
         <a href="#parallax">Parallax</a>
       </nav>
 
+      <!-- [DESTAQUE] Imagem e legenda; as classes relacionadas recebem position no CSS. -->
       <section id="destaque" class="destaque">
         <img src="images/beiramar.jpg" alt="Praia de Aracaju" />
         <p class="frase-destaque">Aracaju: onde o rio encontra o mar.</p>
@@ -38,6 +42,7 @@
 
       <section class="media-section fotos-section">
         <h3 id="fotografias">Fotografias</h3>
+        <!-- [GALERIA] Repetir imagens neste container; .fotografias organiza os itens. -->
         <div class="fotografias">
           <img src="images/alfandega.jpg" alt="Antiga alfândega de Aracaju" />
           <img src="images/catedral.jpg" alt="Catedral de Aracaju" />
@@ -50,6 +55,7 @@
         </div>
       </section>
 
+      <!-- [VIDEO] poster e source; o texto sobreposto usa uma camada acima do video. -->
       <section id="video-background" class="video-background-section">
         <video
           class="video-background"
@@ -72,6 +78,7 @@
 
       <section class="media-section video-section">
         <h3 id="video">Vídeo</h3>
+        <!-- [IFRAME] Incorporacao de video externo com titulo e permissao de tela cheia. -->
         <iframe
           class="video-frame"
           width="560"
@@ -94,6 +101,7 @@
 
       <section class="media-section poesia-section">
         <h3 id="poesia">Poesia</h3>
+        <!-- [CONTEUDO-REPETIDO] A classe permite variar a cor de linhas pares e impares. -->
         <div class="poema">
           <p>Aracaju, cidade de mar e luz,</p>
           <p>Onde o rio encontra o céu azul,</p>
@@ -102,6 +110,7 @@
         </div>
       </section>
 
+      <!-- [PARALLAX] Secao ligada ao fundo configurado em .parallax-section no CSS. -->
       <section id="parallax" class="parallax-section">
         <div class="parallax-content">
           <h3>Entre o rio e o mar</h3>

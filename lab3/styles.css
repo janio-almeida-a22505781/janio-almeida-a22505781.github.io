@@ -1,3 +1,4 @@
+/* [BASE] Regras compartilhadas de tipografia, cores e espacamento da pagina. */
 body {
   margin: 0;
   background-color: #e8f1ed;
@@ -37,6 +38,7 @@ nav a:hover {
   background-color: #c2542d;
 }
 
+/* [CONTEUDO] O main ocupa a largura da pagina; cada secao define seu proprio layout. */
 main {
   width: 100%;
   margin: 0;
@@ -64,6 +66,7 @@ main {
   margin-bottom: 2rem;
 }
 
+/* [IMAGEM] Imagem direta dentro do main, sem afetar imagens da galeria. */
 main > img {
   width: 120px;
   height: 80px;
@@ -71,6 +74,7 @@ main > img {
 }
 
 .destaque {
+  /* [DESTAQUE] O contexto relativo ancora a imagem e a legenda sobreposta. */
   position: relative;
   height: 100vh;
   overflow: hidden;
@@ -78,6 +82,7 @@ main > img {
 }
 
 .destaque img {
+  /* [IMAGEM-CAPA] Preenche a area sem distorcer a proporcao original. */
   display: block;
   width: 100%;
   height: 100%;
@@ -85,6 +90,7 @@ main > img {
 }
 
 .frase-destaque {
+  /* [SOBREPOSICAO] Posiciona a legenda em relacao ao destaque. */
   position: absolute;
   right: 8vw;
   bottom: 10vh;
@@ -98,6 +104,7 @@ main > img {
 }
 
 .media-section {
+  /* [SECAO] Coluna centralizada para secoes de conteudo multimidia. */
   display: flex;
   height: 100vh;
   flex-direction: column;
@@ -116,6 +123,7 @@ main > img {
 }
 
 .video-background-section {
+  /* [CAMADAS] Contexto para o video de fundo e o conteudo em primeiro plano. */
   position: relative;
   display: flex;
   height: 100vh;
@@ -127,6 +135,7 @@ main > img {
 }
 
 .video-background {
+  /* [VIDEO-FUNDO] Ocupa a secao e fica atras do texto pelo z-index. */
   position: absolute;
   z-index: 0;
   width: 100%;
@@ -136,6 +145,7 @@ main > img {
 }
 
 .video-background-content {
+  /* [VIDEO-TEXTO] z-index mantem o conteudo acima do video. */
   position: relative;
   z-index: 1;
   padding: 2rem;
@@ -148,6 +158,7 @@ main > img {
 }
 
 .parallax-section {
+  /* [PARALLAX] Imagem de fundo fixa; em telas pequenas, o efeito e desativado. */
   display: flex;
   height: 100vh;
   align-items: center;
@@ -173,6 +184,7 @@ main > img {
 }
 
 .local-layout {
+  /* [LAYOUT-FLEX] Texto e mapa compartilham o espaco horizontal disponivel. */
   display: flex;
   align-items: center;
   gap: 3rem;
@@ -182,6 +194,7 @@ main > img {
 }
 
 iframe {
+  /* [IFRAME] Limite comum para incorporacoes nao ultrapassarem o container. */
   max-width: 100%;
   border: 0;
 }
@@ -197,12 +210,14 @@ section {
 }
 
 .fotografias {
+  /* [GALERIA] Flex-wrap cria novas linhas quando os itens nao cabem. */
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .fotografias img {
+  /* [GALERIA-IMAGEM] Dimensoes consistentes e corte uniforme das miniaturas. */
   width: 120px;
   height: 80px;
   margin: 0;
@@ -240,6 +255,7 @@ td {
 }
 
 .video-frame {
+  /* [VIDEO-RESPONSIVO] Mantem a proporcao 16:9 enquanto a largura se adapta. */
   width: min(800px, 100%);
   aspect-ratio: 16 / 9;
   height: auto;
@@ -261,6 +277,7 @@ footer {
 }
 
 @media (width <= 600px) {
+  /* [RESPONSIVO] Ajustes aplicados em telas estreitas. */
   header {
     padding: 1rem;
   }
