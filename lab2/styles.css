@@ -109,7 +109,7 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
   header {
     padding: 1rem;
   }

@@ -44,6 +44,10 @@ main {
   background-color: #fff;
 }
 
+.local-layout p {
+  flex: 1;
+}
+
 .pagina-multimedia main > h2,
 .pagina-multimedia main > p,
 .pagina-multimedia main > nav {
@@ -58,6 +62,12 @@ main {
 
 .pagina-multimedia main > nav {
   margin-bottom: 2rem;
+}
+
+main > img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
 }
 
 .destaque {
@@ -162,12 +172,6 @@ main {
   color: #fff;
 }
 
-main > img {
-  width: 120px;
-  height: 80px;
-  object-fit: cover;
-}
-
 .local-layout {
   display: flex;
   align-items: center;
@@ -177,8 +181,9 @@ main > img {
   padding: 2rem;
 }
 
-.local-layout p {
-  flex: 1;
+iframe {
+  max-width: 100%;
+  border: 0;
 }
 
 .local-layout iframe {
@@ -234,11 +239,6 @@ td {
   color: #243447;
 }
 
-iframe {
-  max-width: 100%;
-  border: 0;
-}
-
 .video-frame {
   width: min(800px, 100%);
   aspect-ratio: 16 / 9;
@@ -260,7 +260,7 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 600px) {
+@media (width <= 600px) {
   header {
     padding: 1rem;
   }
