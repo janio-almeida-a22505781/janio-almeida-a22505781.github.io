@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lab 4 | DOM e eventos</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav aria-label="Navegação principal">
+        <a href="../index.html">Portefólio</a>
+        <a href="#experiencia">Experiência</a>
+        <a href="#eventos">Eventos</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="intro" id="experiencia">
+        <p class="eyebrow">LABORATÓRIO 04 · DOM</p>
+        <h1>Uma página que reage a cada movimento.</h1>
+        <p>Experimente os botões, passe o rato pela imagem e mova o cursor pela área interativa.</p>
+      </section>
+
+      <section class="workspace" id="eventos">
+        <div class="workspace-copy">
+          <p class="eyebrow">EXPERIMENTE</p>
+          <h2>Eventos que alteram a página</h2>
+          <p id="message">O DOM está pronto para receber uma ação.</p>
+
+          <div class="counter-box">
+            <span>Contador de cliques</span>
+            <strong id="counter">0</strong>
+          </div>
+
+          <div class="actions">
+            <button id="count-button" type="button">Contar clique</button>
+            <button id="reset-button" type="button">Duplo clique para resetar</button>
+          </div>
+        </div>
+
+        <div class="interaction-area" id="interaction-area">
+          <img id="city-image" src="images/beiramar.jpg" alt="Praia de Aracaju" />
+          <p id="coordinates">Mova o rato nesta área</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Lab 4 · Document Object Model</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
+</html>

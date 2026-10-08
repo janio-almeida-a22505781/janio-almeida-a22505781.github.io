@@ -58,6 +58,10 @@ body > header nav a {
   text-decoration: none;
 }
 
+body > header nav a:hover {
+  background-color: var(--accent);
+}
+
 .hero {
   position: relative;
   display: flex;
@@ -93,25 +97,10 @@ body > header nav a {
   list-style: none;
 }
 
-.project-card a {
-  display: inline-block;
-  margin-top: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-}
-
 .hero nav a,
 .text-link {
   font-weight: bold;
   text-decoration: none;
-}
-
-.text-link {
-  color: #8dc4ff;
-}
-
-body > header nav a:hover {
-  background-color: var(--accent);
 }
 
 .hero nav a:hover,
@@ -149,10 +138,6 @@ h2 {
   max-width: 700px;
   font-size: clamp(2.2rem, 5vw, 4rem);
   line-height: 1.05;
-}
-
-.tutorial-section > p {
-  max-width: 650px;
 }
 
 .hero-content > p:not(.eyebrow) {
@@ -207,6 +192,13 @@ h2 {
   font-weight: bold;
 }
 
+.project-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
 .disciplina {
   display: flex;
   align-items: center;
@@ -228,6 +220,10 @@ h2 {
   margin: 0 auto;
 }
 
+.text-link {
+  color: #8dc4ff;
+}
+
 .pagina-tutoriais main {
   background-color: var(--sky);
 }
@@ -247,6 +243,10 @@ h2 {
 
 .codepens {
   background-color: var(--sky);
+}
+
+.tutorial-section > p {
+  max-width: 650px;
 }
 
 .tutorial-section > iframe {
@@ -277,18 +277,9 @@ h2 {
   border: 0;
 }
 
-@media (width <= 700px) {
+@media (max-width: 700px) {
   section {
     padding: 1.5rem;
-  }
-
-  body > header nav {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  body > header nav a {
-    text-align: center;
   }
 
   .hero nav {
@@ -316,5 +307,14 @@ h2 {
   .tutorial-section > iframe,
   .codepen-grid iframe {
     min-height: 300px;
+  }
+
+  body > header nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  body > header nav a {
+    text-align: center;
   }
 }
