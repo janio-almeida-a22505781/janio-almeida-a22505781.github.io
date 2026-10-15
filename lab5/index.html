@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Lab 5 | Eventos JavaScript</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navegação entre a landing page e as áreas principais do laboratório. -->
+    <header class="site-header">
+      <nav aria-label="Navegação principal">
+        <a href="../index.html">Portefólio</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#formulario">Formulário</a>
+        <a href="#contador">Contador</a>
+      </nav>
+    </header>
+
+    <main>
+      <!-- Apresentação do laboratório e dos conceitos trabalhados. -->
+      <section class="intro">
+        <p class="eyebrow">LABORATÓRIO 05 · JAVASCRIPT</p>
+        <h1>Uma página que muda quando interagimos.</h1>
+        <p>
+          Explore eventos, funções, atributos de dados, <code>this</code>, Local Storage e
+          <code>setInterval</code>.
+        </p>
+      </section>
+
+      <!-- Eventos de clique, teclado e alteração de um select. -->
+      <section class="events-section" id="eventos">
+        <div class="section-heading">
+          <p class="eyebrow">EVENTOS 1.0</p>
+          <h2>Experimente os efeitos</h2>
+          <p id="event-message">Escolha uma ação para alterar esta página.</p>
+        </div>
+
+        <div class="event-grid">
+          <article class="panel colour-panel">
+            <h3>Cores e teclado</h3>
+            <p>Os botões usam <code>querySelectorAll</code>, <code>forEach</code> e <code>data-color</code>.</p>
+            <div class="button-row">
+              <button class="color" data-color="#2c70d6" type="button">Azul</button>
+              <button class="color" data-color="#f06b45" type="button">Coral</button>
+              <button class="color" data-color="#3b9b72" type="button">Verde</button>
+              <button class="color" data-color="#9a5bc7" type="button">Roxo</button>
+            </div>
+            <p class="hint">Pressione qualquer tecla para alternar entre as quatro cores dos botões.</p>
+            <p id="colour-explanation" class="explanation">
+              Cada tecla aumenta a posição da cor no array e aplica uma das cores dos botões a este painel.
+            </p>
+          </article>
+
+          <article class="panel">
+            <h3>Cor do painel</h3>
+            <label for="background-colour">Escolha uma das quatro cores:</label>
+            <select id="background-colour">
+              <option value="#2c70d6">Azul</option>
+              <option value="#f06b45">Coral</option>
+              <option value="#3b9b72">Verde</option>
+              <option value="#9a5bc7">Roxo</option>
+            </select>
+          </article>
+        </div>
+      </section>
+
+      <!-- O select controla a propriedade flex-direction do container. -->
+      <section class="flex-section">
+        <div class="section-heading">
+          <p class="eyebrow">THIS · FLEX</p>
+          <h2>Escolha a direção das bolas</h2>
+        </div>
+        <label for="flex-direction">flex-direction:</label>
+        <select id="flex-direction">
+          <option value="row">row</option>
+          <option value="row-reverse">row-reverse</option>
+          <option value="column">column</option>
+          <option value="column-reverse">column-reverse</option>
+        </select>
+        <div id="balls" class="balls" aria-label="Quatro bolas coloridas">
+          <span></span><span></span><span></span><span></span>
+        </div>
+      </section>
+
+      <!-- O formulário impede o recarregamento e apresenta uma mensagem personalizada. -->
+      <section class="forms-section" id="formulario">
+        <div class="section-heading">
+          <p class="eyebrow">ONSUBMIT</p>
+          <h2>Conheça o utilizador</h2>
+        </div>
+        <form id="user-form">
+          <label for="name">Nome</label>
+          <input id="name" name="name" type="text" placeholder="Insira o seu nome" required />
+          <label for="age">Idade</label>
+          <input id="age" name="age" type="number" min="1" max="120" placeholder="Insira a sua idade" required />
+          <button type="submit">Enviar</button>
+        </form>
+        <p id="form-message" class="result" aria-live="polite"></p>
+      </section>
+
+      <!-- O primeiro contador usa Local Storage; o segundo usa setInterval. -->
+      <section class="counter-section" id="contador">
+        <div class="section-heading">
+          <p class="eyebrow">LOCAL STORAGE</p>
+          <h2>Contador persistente</h2>
+          <p>O valor fica guardado mesmo depois de recarregar a página.</p>
+        </div>
+        <div class="counter-card">
+          <strong id="persistent-counter">0</strong>
+          <div class="button-row">
+            <button id="decrement" type="button">− Decrementar</button>
+            <button id="increment" type="button">+ Incrementar</button>
+            <button id="reset" type="button">Reset</button>
+          </div>
+        </div>
+        <div class="timer-card">
+          <h3>Temporizador automático</h3>
+          <p><strong id="timer">0</strong> segundos desde que abriu a página.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Lab 5 · Eventos JavaScript</p>
+    </footer>
+    <script src="scripts/main.js"></script>
+  </body>
+</html>
