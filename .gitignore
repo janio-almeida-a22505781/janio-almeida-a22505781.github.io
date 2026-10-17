@@ -3,10 +3,8 @@ node_modules/
 npm-debug.log*
 
 # Configuracao local de desenvolvimento
-package.json
 package-lock.json
 .htmlvalidate.json
-.prettierrc.json
 .stylelintrc.json
 .vscode/
 .devcontainer/
