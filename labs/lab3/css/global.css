@@ -1,0 +1,115 @@
+/* [BASE] Regras partilhadas por todas as páginas do Lab 3. */
+body {
+  margin: 0;
+  background-color: #e8f1ed;
+  color: #243447;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.6;
+}
+
+header {
+  padding: 1.5rem;
+  background-color: #2f6b4f;
+  color: #fff;
+  text-align: center;
+}
+
+h1 {
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1rem;
+  background-color: #17221c;
+}
+
+nav a {
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  background-color: #c2542d;
+}
+
+main {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+section {
+  margin-top: 2rem;
+}
+
+iframe {
+  max-width: 100%;
+  border: 0;
+}
+
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.6rem;
+  border: 1px solid #9ab5a5;
+  text-align: left;
+}
+
+th {
+  background-color: #2f6b4f;
+  color: #fff;
+}
+
+td {
+  color: #243447;
+}
+
+footer {
+  padding: 1rem;
+  background-color: #17221c;
+  color: #fff;
+  text-align: center;
+}
+
+@media (width <= 600px) {
+  /*
+    [MEDIA-QUERY]
+    Técnica aplicada conforme o vídeo da playlist disponibilizada:
+    https://www.youtube.com/watch?v=i6x37tJY-58&list=PLq0eqW6lq_BThO5TOFFPy5TT2yUCADjb3&index=7
+    Estas regras globais adaptam a navegação e os elementos partilhados
+    para que todas as páginas continuem legíveis em ecrãs pequenos.
+  */
+  header {
+    padding: 1rem;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  nav a {
+    text-align: center;
+  }
+
+  main {
+    margin: 0;
+    padding: 0;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}

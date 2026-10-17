@@ -1,0 +1,6 @@
+/* [PAGINA-INDEX] Imagem de apresentação exclusiva da página inicial. */
+main > img {
+  width: 120px;
+  height: 80px;
+  object-fit: cover;
+}

@@ -1,0 +1,219 @@
+/*
+  [SELETOR-CHILD]
+  Técnica aplicada conforme o vídeo da playlist disponibilizada:
+  https://www.youtube.com/watch?v=AY4S8hP9row&list=PLq0eqW6lq_BThO5TOFFPy5TT2yUCADjb3
+  O símbolo ">" seleciona apenas os elementos que são filhos diretos de main.
+*/
+.pagina-multimedia main > h2,
+.pagina-multimedia main > p,
+.pagina-multimedia main > nav {
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 800px;
+}
+
+.pagina-multimedia main > h2 {
+  padding-top: 2rem;
+}
+
+.pagina-multimedia main > nav {
+  margin-bottom: 2rem;
+}
+
+/*
+  [CSS-POSITION]
+  Técnica aplicada conforme o vídeo da playlist disponibilizada:
+  https://www.youtube.com/watch?v=Cg9GkRVJUMc&list=PLq0eqW6lq_BThO5TOFFPy5TT2yUCADjb3&index=4
+  .destaque usa position: relative como referência, enquanto
+  .frase-destaque usa position: absolute para ficar sobre a imagem.
+*/
+.destaque {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  padding: 0;
+}
+
+.destaque img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.frase-destaque {
+  position: absolute;
+  right: 8vw;
+  bottom: 10vh;
+  max-width: 700px;
+  margin: 0;
+  color: #fff;
+  font-size: 6vw;
+  font-weight: bold;
+  line-height: 1;
+  text-shadow: 2px 2px 8px #17221c;
+}
+
+.media-section {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 3rem 8vw;
+}
+
+.fotos-section {
+  background-color: #f4eee5;
+}
+
+.video-section {
+  align-items: center;
+  background-color: #d9edf4;
+}
+
+.video-background-section {
+  /*
+    [FLEX-CENTRALIZACAO]
+    Técnica aplicada conforme o vídeo da playlist disponibilizada:
+    https://www.youtube.com/watch?v=eGqXr3iOnRA&list=PLq0eqW6lq_BThO5TOFFPy5TT2yUCADjb3&index=5
+    Este container usa Flexbox; justify-content e align-items centralizam
+    o conteúdo horizontal e verticalmente na tela.
+  */
+  position: relative;
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #17221c;
+  color: #fff;
+}
+
+.video-background {
+  position: absolute;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.65;
+}
+
+.video-background-content {
+  position: relative;
+  z-index: 1;
+  padding: 2rem;
+  text-align: center;
+  text-shadow: 1px 1px 5px #17221c;
+}
+
+.video-background-content h3 {
+  font-size: clamp(2rem, 6vw, 5rem);
+}
+
+.parallax-section {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgb(23 34 28 / 45%), rgb(23 34 28 / 45%)), url('../../images/praia.jpg');
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.parallax-content {
+  max-width: 650px;
+  padding: 2rem;
+  background-color: rgb(23 34 28 / 72%);
+  text-align: center;
+}
+
+.poesia-section {
+  background-color: #263b38;
+  color: #fff;
+}
+
+.fotografias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.fotografias img {
+  width: 120px;
+  height: 80px;
+  margin: 0;
+  object-fit: cover;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+.fotografias img:hover {
+  filter: saturate(1.3);
+  transform: scale(1.08) rotate(-2deg);
+}
+
+/*
+  [COMPOSICAO-DE-SELETORES]
+  Técnica aplicada conforme o vídeo da playlist disponibilizada:
+  https://www.youtube.com/watch?v=lH96UgpDJDs&list=PLq0eqW6lq_BThO5TOFFPy5TT2yUCADjb3&index=2
+  :first-child seleciona a primeira fotografia e :nth-child(3) seleciona
+  especificamente a terceira sem adicionar classes ao HTML.
+*/
+.fotografias img:first-child {
+  border-radius: 14px;
+}
+
+.fotografias img:nth-child(3) {
+  border: 4px solid #c2542d;
+}
+
+.video-frame {
+  width: min(800px, 100%);
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+
+.poema p:nth-child(odd) {
+  color: #174a5b;
+}
+
+.poema p:nth-child(even) {
+  color: #c2542d;
+}
+
+@media (width <= 600px) {
+  .pagina-multimedia main > h2,
+  .pagina-multimedia main > p,
+  .pagina-multimedia main > nav {
+    margin-right: 1rem;
+    margin-left: 1rem;
+  }
+
+  .destaque,
+  .media-section,
+  .video-background-section,
+  .parallax-section {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .frase-destaque {
+    right: 1.5rem;
+    bottom: 3rem;
+    left: 1.5rem;
+    font-size: 11vw;
+  }
+
+  .media-section {
+    padding: 2rem 1rem;
+  }
+
+  .parallax-section {
+    background-attachment: scroll;
+  }
+}

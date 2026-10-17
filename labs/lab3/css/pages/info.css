@@ -1,0 +1,93 @@
+/*
+  [DISPLAY-GRID]
+  Técnica aplicada conforme o vídeo da playlist disponibilizada:
+  https://www.youtube.com/watch?v=nmofjZIkxjo&list=PLq0eqW6lq_BThO5TOFFPy5TT2yUCADjb3&index=6
+  A página de informações usa Grid para posicionar tabela, imagens e
+  curiosidades em duas dimensões. A célula central vazia cria espaço em branco.
+*/
+.pagina-info .info-grid {
+  display: grid;
+  grid-template-areas:
+    'intro intro intro'
+    'image table blank'
+    'image table curiosities'
+    'gallery gallery curiosities';
+  grid-template-columns: 1fr 1.3fr 1fr;
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 3rem 7vw;
+  background-color: #fff;
+}
+
+.pagina-info .info-intro {
+  grid-area: intro;
+}
+
+.pagina-info .info-image {
+  grid-area: image;
+  margin: 0;
+}
+
+.pagina-info .info-image img {
+  display: block;
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+}
+
+.pagina-info .info-image figcaption {
+  padding: 0.75rem;
+  background-color: #e8f1ed;
+  font-style: italic;
+}
+
+.pagina-info .info-table {
+  grid-area: table;
+  align-self: start;
+  margin-top: 0;
+}
+
+.pagina-info .curiosities {
+  grid-area: curiosities;
+  padding: 1.5rem;
+  background-color: #f4eee5;
+}
+
+.pagina-info .curiosities ol {
+  margin-bottom: 0;
+  padding-left: 1.25rem;
+}
+
+.pagina-info .info-gallery {
+  display: flex;
+  grid-area: gallery;
+  gap: 1rem;
+}
+
+.pagina-info .info-gallery img {
+  width: 50%;
+  height: 150px;
+  object-fit: cover;
+}
+
+@media (width <= 600px) {
+  .pagina-info .info-grid {
+    grid-template-areas:
+      'intro'
+      'image'
+      'table'
+      'curiosities'
+      'gallery';
+    grid-template-columns: 1fr;
+    padding: 2rem 1rem;
+  }
+
+  .pagina-info .info-gallery {
+    flex-direction: column;
+  }
+
+  .pagina-info .info-gallery img {
+    width: 100%;
+  }
+}

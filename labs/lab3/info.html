@@ -4,9 +4,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Informações de Aracaju</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="css/pages/info.css" />
   </head>
-  <body>
+  <body class="pagina-info">
     <!-- [ESTRUTURA] Cabecalho com titulo e links para as paginas do site. -->
     <header>
       <h1>Aracaju</h1>
@@ -19,16 +20,21 @@
       </nav>
     </header>
 
-    <main>
-      <h2>Informações</h2>
-      <p>Esta página apresenta alguns dados geográficos e curiosidades sobre Aracaju.</p>
-      <img src="images/catedral.jpg" alt="Catedral Metropolitana de Aracaju" />
+    <!-- [GRID] Conteúdos distribuídos em áreas 2D, incluindo uma área vazia intencional. -->
+    <main class="info-grid">
+      <div class="info-intro">
+        <h2>Informações</h2>
+        <p>Esta página apresenta alguns dados geográficos e curiosidades sobre Aracaju.</p>
+      </div>
+
+      <figure class="info-image info-image-main">
+        <img src="images/catedral.jpg" alt="Catedral Metropolitana de Aracaju" />
+        <figcaption>Património e história de Aracaju.</figcaption>
+      </figure>
 
       <!-- [TABELA] caption nomeia a tabela; th e scope identificam cabecalhos. -->
-      <table>
-        <caption>
-          Dados de Aracaju
-        </caption>
+      <table class="info-table">
+        <caption>Dados de Aracaju</caption>
         <tbody>
           <tr>
             <th colspan="3" scope="colgroup">Informação geográfica</th>
@@ -53,15 +59,22 @@
         </tbody>
       </table>
 
-      <h3>5 curiosidades sobre Aracaju</h3>
-      <!-- [LISTA-ORDENADA] Use ol para sequencia numerada e ul para itens sem ordem. -->
-      <ol>
-        <li>Aracaju é a capital do estado de Sergipe.</li>
-        <li>Foi fundada em 1855.</li>
-        <li>É uma cidade litorânea banhada pelo oceano Atlântico.</li>
-        <li>A Orla de Atalaia é um dos seus espaços mais conhecidos.</li>
-        <li>O nome Aracaju está relacionado à expressão indígena “cajueiro dos papagaios”.</li>
-      </ol>
+      <aside class="curiosities">
+        <h3>5 curiosidades sobre Aracaju</h3>
+        <!-- [LISTA-ORDENADA] Use ol para sequencia numerada e ul para itens sem ordem. -->
+        <ol>
+          <li>É a capital do estado de Sergipe.</li>
+          <li>Foi fundada em 1855.</li>
+          <li>É banhada pelo oceano Atlântico.</li>
+          <li>A Orla de Atalaia é um espaço conhecido.</li>
+          <li>O nome significa “cajueiro dos papagaios”.</li>
+        </ol>
+      </aside>
+
+      <figure class="info-gallery">
+        <img src="images/beiramar.jpg" alt="Avenida Beira Mar" />
+        <img src="images/mercado.jpg" alt="Mercado de artesanato" />
+      </figure>
     </main>
 
     <footer>
