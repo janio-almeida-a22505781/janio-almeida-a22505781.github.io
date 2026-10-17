@@ -1,0 +1,79 @@
+/*
+  [DEMO-02 · CSS-POSITION]
+  Implementação mapeada a partir dos prints do CodePen do segundo vídeo:
+  https://www.youtube.com/watch?v=Cg9GkRVJUMc&list=PLq0eqW6lq_BThO5TOFFPy5TT2yUCADjb3&index=4
+  Personalização: o conteúdo identifica Jânio Almeida e o aluno 22505781.
+*/
+.composition-demo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 7vw;
+  background-color: var(--white);
+}
+
+.contentor {
+  width: 80vw;
+  max-width: 720px;
+  padding: 10px;
+  border: 1px solid rgb(20 40 61 / 18%);
+  background-color: #1e90ff;
+}
+
+.contentor > div {
+  padding: 0.75rem;
+  background-color: #2c70d6;
+  color: var(--white);
+  font-weight: bold;
+}
+
+.contentor > div:last-child {
+  background-color: #f0e68c;
+  color: var(--ink);
+}
+
+/* O segundo bloco é deslocado sem perder o seu espaço original. */
+.contentor > div:nth-child(2) {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+
+.fora {
+  position: relative;
+  width: 80vw;
+  max-width: 720px;
+  height: 160px;
+  background-color: salmon;
+}
+
+/* O elemento absoluto usa .fora como referência de posicionamento. */
+.dentro {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  display: grid;
+  width: 70px;
+  height: 50px;
+  place-items: center;
+  background-color: #808080;
+  color: var(--white);
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.selector-legend {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  background-color: #fff4df;
+}
+
+.selector-legend p {
+  margin: 0.35rem 0;
+}
+
+@media (width <= 600px) {
+  .composition-demo {
+    padding: 4rem 1.5rem;
+  }
+}

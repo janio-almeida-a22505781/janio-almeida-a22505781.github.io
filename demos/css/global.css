@@ -1,0 +1,115 @@
+/* [BASE] Estilos partilhados pela página de índice e por todas as demos. */
+/* stylelint-disable no-descending-specificity */
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --ink: #14283d;
+  --blue: #2c70d6;
+  --sky: #eaf4ff;
+  --accent: #f06b45;
+  --white: #fff;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background-color: var(--sky);
+  color: var(--ink);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.6;
+}
+
+.site-header {
+  padding: 1.5rem 7vw;
+  background-color: var(--ink);
+}
+
+.site-header nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.site-header a {
+  color: var(--white);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.site-header a:hover,
+.demo-link:hover {
+  color: var(--accent);
+}
+
+.demos-main,
+.selector-demo {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 6rem 7vw;
+}
+
+.eyebrow,
+.demo-number {
+  color: var(--blue);
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.18rem;
+}
+
+h1 {
+  font-size: clamp(2.8rem, 8vw, 6rem);
+  line-height: 1;
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.demo-card {
+  padding: 1.5rem;
+  border: 1px solid rgb(20 40 61 / 18%);
+  background-color: var(--white);
+}
+
+.demo-card h2 {
+  margin-top: 0;
+}
+
+.demo-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--blue);
+  font-weight: bold;
+}
+
+.selector-demo {
+  background-color: var(--white);
+}
+
+.student-number {
+  color: var(--accent);
+  font-weight: bold;
+}
+
+.explanation {
+  max-width: 650px;
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  background-color: #fff4df;
+}
+
+@media (width <= 600px) {
+  .site-header nav {
+    flex-direction: column;
+  }
+
+  .demos-main,
+  .selector-demo {
+    padding: 4rem 1.5rem;
+  }
+}

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Demo 04 | Grid Layout + Media Query</title>
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/pages/grid-layout-responsivo.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav aria-label="Navegação da demo">
+        <a href="../index.html">Todas as demos</a>
+        <a href="../../index.html">Portefólio</a>
+      </nav>
+    </header>
+
+    <main class="grid-demo" aria-label="Demonstração de Grid Layout responsivo">
+      <p class="eyebrow">DEMO 04 · GRID + RESPONSIVIDADE</p>
+      <h1>Grid Layout responsivo</h1>
+      <p class="student-number">Jânio Almeida · 22505781</p>
+
+      <div class="contentor">
+        <div class="grid-header">
+          <h2>Desenvolvimento Web</h2>
+          <p>Uma página organizada em duas dimensões.</p>
+        </div>
+        <nav class="grid-menu" aria-label="Menu da demonstração">
+          <h2>Menu</h2>
+          <a href="#conteudo">Conteúdo</a>
+          <a href="#info">Info</a>
+          <a href="#rodape">Rodapé</a>
+        </nav>
+        <section id="conteudo" class="grid-main" aria-labelledby="conteudo-titulo">
+          <h2 id="conteudo-titulo">Conteúdo</h2>
+          <p>O CSS Grid permite definir linhas, colunas e áreas com nomes semânticos.</p>
+        </section>
+        <aside id="info" class="grid-aside">
+          <h2>Info</h2>
+          <p>Aluno: 22505781</p>
+          <p>Autor: Jânio Almeida</p>
+        </aside>
+        <footer id="rodape" class="grid-footer">Lab de CSS · Jânio Almeida</footer>
+      </div>
+
+      <div class="selector-legend">
+        <p><code>grid-template-areas</code> define a posição de cada região.</p>
+        <p><code>grid-template-columns</code> e <code>grid-template-rows</code> definem as dimensões da grelha.</p>
+        <p><code>@media (width &lt;= 700px)</code> reorganiza as áreas numa coluna para ecrãs pequenos.</p>
+      </div>
+    </main>
+  </body>
+</html>

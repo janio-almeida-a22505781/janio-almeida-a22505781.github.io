@@ -1,0 +1,168 @@
+/* Os seletores compostos abaixo demonstram relações entre elementos. */
+/* stylelint-disable no-descending-specificity */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #eaf4ff;
+  color: #14283d;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.6;
+}
+
+header {
+  padding: 1rem 7vw;
+  background: #14283d;
+  color: #fff;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+header a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 5rem 7vw;
+  background: #fff;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  line-height: 1;
+}
+
+input[type='text'] {
+  padding: 0.75rem;
+  border: 2px solid #2c70d6;
+}
+
+.destaque,
+#titulo,
+.parent > div + p,
+.parent > p:first-child {
+  color: #c2542d;
+}
+
+.parent > div {
+  padding: 1rem;
+  background: #eaf4ff;
+}
+
+.parent > div + p {
+  color: #9a5bc7;
+}
+
+.box-model-card {
+  margin: 2rem;
+  padding: 2rem;
+  border: 8px solid #2c70d6;
+  border-radius: 20px;
+  background: #fff4df;
+}
+
+.flex-demo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 1rem;
+  padding: 2rem;
+  background: #d9edf4;
+}
+
+.flex-demo span {
+  padding: 1rem;
+  background: #f06b45;
+  color: #fff;
+}
+
+.grid-demo {
+  display: grid;
+  grid-template:
+    'header header' auto
+    'menu content' auto
+    'info footer' auto / 1fr 2fr;
+  gap: 10px;
+}
+
+.grid-demo > div {
+  padding: 2rem;
+  background: #d9edf4;
+}
+
+.grid-header {
+  grid-area: header;
+}
+
+.grid-footer {
+  grid-area: footer;
+}
+
+.responsive-card {
+  padding: 2rem;
+  background: #9a5bc7;
+  color: #fff;
+}
+
+.image-position {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-position img {
+  display: block;
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.image-position p {
+  position: absolute;
+  right: 2rem;
+  bottom: 1rem;
+  margin: 0;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-shadow: 1px 1px 4px #000;
+}
+
+@media (width <= 600px) {
+  header nav {
+    flex-direction: column;
+  }
+
+  main {
+    padding: 3rem 1.5rem;
+  }
+
+  .grid-demo {
+    grid-template:
+      'header' auto
+      'menu' auto
+      'content' auto
+      'info' auto
+      'footer' auto / 1fr;
+  }
+
+  .grid-demo > div {
+    min-height: 90px;
+  }
+
+  .image-position p {
+    right: 1rem;
+    left: 1rem;
+    font-size: 1.4rem;
+  }
+}

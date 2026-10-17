@@ -1,0 +1,30 @@
+/*
+  [DEMO-01 · SELETORES-CHILD]
+  Implementação inspirada no CodePen do primeiro vídeo:
+  https://www.youtube.com/watch?v=AY4S8hP9row&list=PLq0eqW6lq_BThO5TOFFPy5TT2yUCADjb3
+  Personalização: o conteúdo identifica Jânio Almeida e o aluno 22505781.
+*/
+
+/* :first-child seleciona o primeiro filho h1 dentro desta página. */
+.selector-demo h1:first-child {
+  color: #174a5b;
+}
+
+/* > seleciona apenas os li que são filhos diretos da lista principal. */
+.selector-demo > ul > li {
+  color: #c2542d;
+}
+
+/* A lista interna volta à cor base antes de destacar o segundo elemento. */
+.selector-demo > ul > li > ul > li {
+  color: #14283d;
+}
+
+/* O segundo li da lista interna recebe uma cor diferente. */
+.selector-demo > ul > li > ul > li:nth-child(2) {
+  color: #9a5bc7;
+}
+
+.selector-demo > ul > li > ul {
+  margin-top: 0.5rem;
+}

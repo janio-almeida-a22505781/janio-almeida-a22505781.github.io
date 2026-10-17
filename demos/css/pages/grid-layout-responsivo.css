@@ -1,0 +1,99 @@
+/*
+  [DEMO-04 · CSS-GRID-LAYOUT + MEDIA-QUERY]
+  Implementação inspirada nos prints do CodePen dos vídeos sobre CSS Grid e Media Query:
+  https://www.youtube.com/watch?v=nmofjZIkxjo&list=PLq0eqW6lq_BThO5TOFFPy5TT2yUCADjb3&index=6
+  https://www.youtube.com/watch?v=i6x37tJY-58&list=PLq0eqW6lq_BThO5TOFFPy5TT2yUCADjb3&index=7
+  Personalização: o conteúdo identifica Jânio Almeida e o aluno 22505781.
+*/
+.grid-demo {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 7vw;
+  background-color: var(--white);
+}
+
+.contentor > * {
+  padding: 1rem;
+  border: 1px solid var(--ink);
+  background-color: rgb(255 255 255 / 86%);
+  font-size: 1.1rem;
+}
+
+.contentor {
+  display: grid;
+  grid-template:
+    'header header header' 150px
+    'menu main aside' 1fr
+    'menu footer footer' 60px / 20vw 3fr 2fr;
+  gap: 10px;
+  min-height: 500px;
+  padding: 10px;
+  background-color: #9a5bc7;
+}
+
+.grid-header {
+  grid-area: header;
+  background-color: #f0a8d6;
+}
+
+.grid-menu {
+  grid-area: menu;
+  background-color: #f4d35e;
+}
+
+.grid-main {
+  grid-area: main;
+  background-color: #b8e0d2;
+}
+
+.grid-aside {
+  grid-area: aside;
+  background-color: #f7c59f;
+}
+
+.grid-footer {
+  grid-area: footer;
+  background-color: #7fc8a9;
+}
+
+.contentor h2 {
+  margin-top: 0;
+}
+
+.grid-menu a {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: var(--ink);
+  font-weight: bold;
+}
+
+.selector-legend {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-left: 4px solid var(--accent);
+  background-color: #fff4df;
+}
+
+.selector-legend p {
+  margin: 0.35rem 0;
+}
+
+@media (width <= 700px) {
+  /*
+    [MEDIA-QUERY]
+    Em ecrãs pequenos, a grelha passa de várias colunas para uma coluna.
+    Assim, menu, conteúdo, informação e rodapé ficam empilhados e legíveis.
+  */
+  .grid-demo {
+    padding: 4rem 1.5rem;
+  }
+
+  .contentor {
+    grid-template:
+      'header' auto
+      'menu' auto
+      'main' auto
+      'aside' auto
+      'footer' auto / 1fr;
+  }
+}
