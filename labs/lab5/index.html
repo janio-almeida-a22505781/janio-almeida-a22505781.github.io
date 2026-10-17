@@ -39,16 +39,22 @@
         <div class="event-grid">
           <article class="panel colour-panel">
             <h3>Cores e teclado</h3>
-            <p>Os botões usam <code>querySelectorAll</code>, <code>forEach</code> e <code>data-color</code>.</p>
+            <p>
+              Os botões usam <code>querySelectorAll</code>, <code>forEach</code> e
+              <code>data-color</code>.
+            </p>
             <div class="button-row">
               <button class="color" data-color="#2c70d6" type="button">Azul</button>
               <button class="color" data-color="#f06b45" type="button">Coral</button>
               <button class="color" data-color="#3b9b72" type="button">Verde</button>
               <button class="color" data-color="#9a5bc7" type="button">Roxo</button>
             </div>
-            <p class="hint">Pressione qualquer tecla para alternar entre as quatro cores dos botões.</p>
+            <p class="hint">
+              Pressione qualquer tecla para alternar entre as quatro cores dos botões.
+            </p>
             <p id="colour-explanation" class="explanation">
-              Cada tecla aumenta a posição da cor no array e aplica uma das cores dos botões a este painel.
+              Cada tecla aumenta a posição da cor no array e aplica uma das cores dos botões a este
+              painel.
             </p>
           </article>
 
@@ -78,9 +84,7 @@
           <option value="column">column</option>
           <option value="column-reverse">column-reverse</option>
         </select>
-        <div id="balls" class="balls">
-          <span></span><span></span><span></span><span></span>
-        </div>
+        <div id="balls" class="balls"><span></span><span></span><span></span><span></span></div>
       </section>
 
       <!-- O formulário impede o recarregamento e apresenta uma mensagem personalizada. -->
@@ -93,7 +97,15 @@
           <label for="name">Nome</label>
           <input id="name" name="name" type="text" placeholder="Insira o seu nome" required />
           <label for="age">Idade</label>
-          <input id="age" name="age" type="number" min="1" max="120" placeholder="Insira a sua idade" required />
+          <input
+            id="age"
+            name="age"
+            type="number"
+            min="1"
+            max="120"
+            placeholder="Insira a sua idade"
+            required
+          />
           <button type="submit">Enviar</button>
         </form>
         <p id="form-message" class="result" aria-live="polite"></p>
