@@ -42,6 +42,65 @@ h1 {
   line-height: 1;
 }
 
+.tutorial-heading {
+  margin-bottom: 3rem;
+}
+
+.eyebrow {
+  color: #2c70d6;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 0.18rem;
+}
+
+.embedded-demo {
+  margin: 3rem 0;
+}
+
+.embedded-demo h2 {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+
+.embed-frame {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  min-height: 480px;
+}
+
+.embed-frame iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #9ab5c7;
+}
+
+.codepen {
+  width: 100%;
+  min-height: 600px;
+  margin: 0;
+  border: 2px solid #9ab5c7;
+  padding: 1rem;
+}
+
+.codepen iframe {
+  width: 100%;
+  min-height: 600px;
+  border: 0;
+}
+
+.codepen-direct {
+  width: 100%;
+  min-height: 600px;
+  border: 2px solid #9ab5c7;
+}
+
+.codepen-direct iframe {
+  display: block;
+  width: 100%;
+  min-height: 600px;
+  border: 0;
+}
+
 input[type='text'] {
   padding: 0.75rem;
   border: 2px solid #2c70d6;

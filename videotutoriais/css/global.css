@@ -95,7 +95,8 @@ h1 {
 
 .tutorial-card iframe {
   width: 100%;
-  height: 150px;
+  aspect-ratio: 16 / 10;
+  height: auto;
   margin: 1rem 0;
   border: 2px dashed #9aafc2;
   background-color: #f3f6f8;
