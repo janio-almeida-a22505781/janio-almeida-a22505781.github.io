@@ -1,6 +1,6 @@
 // declaração de variáveis
 const nodeInputNumero = document.querySelector('#colecao input[type="number"]');
-const nodeInputSubmit = document.querySelector('#colecao input[type="submit"]');
+const nodeInputSubmit = document.querySelector('#colecao button[type="submit"]');
 const nodeUlColecao = document.querySelector('#colecao ul');
 const nodeUlRepetidos = document.querySelector('#repetidos ul');
 const nodeTotalColecao = document.querySelector('#colecao #total-colecao');
