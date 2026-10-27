@@ -117,8 +117,23 @@ section h2 {
   margin-bottom: 0.75rem;
 }
 
-.produto p:nth-last-child(2) {
+.produto p:nth-of-type(3) {
   flex-grow: 1;
+}
+
+.produto button {
+  align-self: center;
+  padding: 0.45rem 0.75rem;
+  color: var(--white);
+  background-color: var(--purple);
+  border: 0;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+.produto button:hover {
+  background-color: var(--ink);
 }
 
 #cesto {
