@@ -30,7 +30,7 @@ main {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   padding: 2rem 7vw;
 }
 
@@ -68,7 +68,9 @@ body > header nav a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
   background-color: var(--sky);
   background-image:
     linear-gradient(
@@ -93,7 +95,9 @@ body > header nav a:hover {
 .hero nav ul {
   display: flex;
   justify-content: flex-end;
+  flex-wrap: wrap;
   gap: 2rem;
+  row-gap: 0.5rem;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -111,8 +115,9 @@ body > header nav a:hover {
 }
 
 .hero-content {
-  max-width: 680px;
   position: relative;
+  max-width: 680px;
+  margin-top: clamp(2rem, 8vh, 5rem);
 }
 
 .eyebrow {
@@ -183,11 +188,6 @@ h2 {
   padding: 1.5rem;
   border: 1px solid rgb(20 40 61 / 18%);
   background-color: var(--white);
-}
-
-.project-card.featured {
-  background-color: var(--blue);
-  color: var(--white);
 }
 
 .project-number {
@@ -305,10 +305,9 @@ footer {
   }
 
   .hero {
-    height: auto;
     min-height: 100vh;
-    justify-content: flex-end;
-    padding-top: 10rem;
+    justify-content: flex-start;
+    padding-top: 16rem;
     padding-bottom: 3rem;
   }
 
