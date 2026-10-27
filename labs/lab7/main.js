@@ -1,5 +1,7 @@
 // A. Estado e variáveis com referência de elementos do DOM
 const nodeListaProdutos = document.querySelector('#lista-produtos');
+const nodeProdutosSelecionados = document.querySelector('#produtos-selecionados');
+const nodePrecoTotal = document.querySelector('#preco-total');
 const chaveProdutosSelecionados = 'produtos-selecionados';
 
 // B. Funções utilitárias
@@ -52,9 +54,36 @@ function criarProduto(produto) {
 
     produtosSelecionados.push(produto);
     guardarProdutosSelecionados(produtosSelecionados);
+    atualizaCesto();
   });
 
   article.append(title, image, category, price, description, rating, addButton);
+  return article;
+}
+
+function criaProdutoCesto(produto, indice) {
+  const article = document.createElement('article');
+  const title = document.createElement('h3');
+  const image = document.createElement('img');
+  const price = document.createElement('p');
+  const removeButton = document.createElement('button');
+
+  article.className = 'produto';
+  title.textContent = produto.title;
+  image.src = produto.image;
+  image.alt = produto.title;
+  price.textContent = `Preço: ${formatarPreco(produto.price)}`;
+  removeButton.type = 'button';
+  removeButton.textContent = '- Remover do cesto';
+  removeButton.addEventListener('click', () => {
+    const produtosSelecionados = carregarProdutosSelecionados();
+
+    produtosSelecionados.splice(indice, 1);
+    guardarProdutosSelecionados(produtosSelecionados);
+    atualizaCesto();
+  });
+
+  article.append(title, image, price, removeButton);
   return article;
 }
 
@@ -67,6 +96,25 @@ function renderizarProdutos(listaProdutos) {
   });
 }
 
+function atualizaCesto() {
+  const produtosSelecionados = carregarProdutosSelecionados();
+
+  nodeProdutosSelecionados.textContent = '';
+
+  if (produtosSelecionados.length === 0) {
+    const mensagem = document.createElement('p');
+    mensagem.textContent = 'O cesto está vazio.';
+    nodeProdutosSelecionados.append(mensagem);
+  } else {
+    produtosSelecionados.forEach((produto, indice) => {
+      nodeProdutosSelecionados.append(criaProdutoCesto(produto, indice));
+    });
+  }
+
+  const precoTotal = produtosSelecionados.reduce((total, produto) => total + produto.price, 0);
+  nodePrecoTotal.textContent = formatarPreco(precoTotal);
+}
+
 // D. Event listeners
 
 // E. Inicialização
@@ -75,3 +123,4 @@ if (localStorage.getItem(chaveProdutosSelecionados) === null) {
 }
 
 renderizarProdutos(produtos);
+atualizaCesto();
