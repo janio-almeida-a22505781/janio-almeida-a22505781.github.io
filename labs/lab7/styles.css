@@ -1,0 +1,162 @@
+:root {
+  --ink: #14283d;
+  --purple: #850080;
+  --light-purple: #f5e8f4;
+  --white: #fff;
+  --border: #dedede;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background-color: #f4f4f4;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.5;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 7vw;
+  color: var(--white);
+  background-color: var(--purple);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+nav ul {
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  color: inherit;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  width: min(1200px, 86vw);
+  margin: 0 auto;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+section + section {
+  border-top: 1px solid var(--border);
+}
+
+section h2 {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#lista-produtos,
+#produtos-selecionados {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.produto {
+  display: flex;
+  width: 250px;
+  min-height: 480px;
+  flex-direction: column;
+  padding: 1.25rem;
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 0.25rem;
+  box-shadow: 0 0.25rem 0.75rem rgb(20 40 61 / 8%);
+}
+
+.produto h3 {
+  min-height: 3.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.produto img {
+  display: block;
+  width: 100%;
+  height: 180px;
+  margin-bottom: 1rem;
+  object-fit: contain;
+}
+
+.produto p {
+  margin-bottom: 0.75rem;
+}
+
+.produto p:nth-last-child(2) {
+  flex-grow: 1;
+}
+
+#cesto {
+  background-color: var(--light-purple);
+}
+
+#preco-total {
+  color: var(--purple);
+  font-size: 1.25rem;
+}
+
+footer {
+  padding: 1.5rem 7vw;
+  color: var(--white);
+  background-color: var(--ink);
+  text-align: center;
+}
+
+@media (width <= 600px) {
+  header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+    gap: 0.75rem 1rem;
+  }
+
+  main {
+    width: min(100% - 2rem, 1200px);
+  }
+
+  section {
+    padding: 2rem 0;
+  }
+
+  .produto {
+    width: min(100%, 300px);
+  }
+}
