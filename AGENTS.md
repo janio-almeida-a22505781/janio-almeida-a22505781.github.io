@@ -16,7 +16,8 @@ This repository is a static web project for a university course on web interface
 - Root pages: [index.html](index.html), [styles.css](styles.css)
 - Labs 1–8: [labs/](labs/)
 - Completed online store: [labs/lab7/](labs/lab7/)
-- In-progress API version of the store: [labs/lab8/](labs/lab8/)
+- API version of the store (filter, search, sort, checkout): [labs/lab8/](labs/lab8/)
+- Exam study material in Portuguese (guide, code map, practice exercises): [estudo/](estudo/)
 - CSS demos: [demos/](demos/)
 - Videotutorial catalogue and pages: [videotutoriais/](videotutoriais/)
 - Project overview: [README.md](README.md)
@@ -48,5 +49,6 @@ This repository is a coursework site focused on learning HTML/CSS fundamentals, 
 
 ## Handoff status
 - Lab 7 is complete: static product data, product rendering, styling, `localStorage` cart, removal, total and homepage link are implemented.
-- Lab 8 is not complete: it has the store page and API-oriented `main.js`, but `labs/lab8/produtos.js` is missing even though `index.html` still references it, and `fetchProdutos()` currently does not return the fetched data to `renderizarProdutos()`.
-- Do not silently rewrite Lab 8. First verify the API response shape and then implement the smallest educational fix, preserving the existing Lab 7 behavior as the reference.
+- Lab 8 is implemented and browser-tested: products, categories and checkout come from the DEISI Shop API (`GET /products`, `GET /categories`, `POST /buy`), with category filter, name search, price sort, cart persistence (`localStorage` key `lab8-produtos-selecionados`) and explicit error messages. `produtos.js` was removed on purpose.
+- The API returns `price` as text and `image` as a relative path; `normalizarProduto()` in `labs/lab8/main.js` converts both.
+- `labs/lab8/main.js` has `RECEITA:` comments marking reusable patterns; keep them when editing, since the files in `estudo/` refer to them.
