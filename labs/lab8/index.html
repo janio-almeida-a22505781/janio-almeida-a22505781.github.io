@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Loja</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Loja</h1>
+      <nav aria-label="Navegação da loja">
+        <ul>
+          <li><a href="#produtos">Produtos</a></li>
+          <li><a href="#cesto">Cesto</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="produtos" aria-labelledby="titulo-produtos">
+        <h2 id="titulo-produtos">Produtos</h2>
+        <div id="lista-produtos"></div>
+      </section>
+
+      <section id="cesto" aria-labelledby="titulo-cesto">
+        <h2 id="titulo-cesto">Cesto</h2>
+        <div id="produtos-selecionados" aria-live="polite"></div>
+        <p>Preço total: <strong id="preco-total">0,00 €</strong></p>
+      </section>
+    </main>
+
+    <footer>
+      <p>Loja · Desenvolvimento de Interfaces Web</p>
+    </footer>
+
+    <script src="produtos.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
