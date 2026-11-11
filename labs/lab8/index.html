@@ -20,6 +20,20 @@
     <main>
       <section id="produtos" aria-labelledby="titulo-produtos">
         <h2 id="titulo-produtos">Produtos</h2>
+        <div id="filtros">
+          <label for="pesquisa">Pesquisar</label>
+          <input type="search" id="pesquisa" placeholder="Nome do produto" />
+          <label for="categoria">Categoria</label>
+          <select id="categoria">
+            <option value="">Todas</option>
+          </select>
+          <label for="ordenacao">Preço</label>
+          <select id="ordenacao">
+            <option value="">Sem ordenação</option>
+            <option value="asc">Crescente</option>
+            <option value="desc">Decrescente</option>
+          </select>
+        </div>
         <div id="lista-produtos"></div>
       </section>
 
@@ -27,6 +41,18 @@
         <h2 id="titulo-cesto">Cesto</h2>
         <div id="produtos-selecionados" aria-live="polite"></div>
         <p>Preço total: <strong id="preco-total">0,00 €</strong></p>
+        <form id="form-compra">
+          <label for="nome">Nome</label>
+          <input type="text" id="nome" />
+          <label>
+            <input type="checkbox" id="estudante" />
+            Sou estudante
+          </label>
+          <label for="cupao">Cupão de desconto</label>
+          <input type="text" id="cupao" />
+          <button type="submit">Comprar</button>
+        </form>
+        <div id="resultado-compra" aria-live="polite"></div>
       </section>
     </main>
 
@@ -34,7 +60,6 @@
       <p>Loja · Desenvolvimento de Interfaces Web</p>
     </footer>
 
-    <script src="produtos.js"></script>
     <script src="main.js"></script>
   </body>
 </html>

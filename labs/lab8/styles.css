@@ -79,6 +79,29 @@ section h2 {
   text-align: center;
 }
 
+#filtros,
+#form-compra {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem 1rem;
+  margin-bottom: 2rem;
+}
+
+#filtros input,
+#filtros select,
+#form-compra input[type='text'] {
+  padding: 0.4rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 0.2rem;
+  font: inherit;
+}
+
+#resultado-compra {
+  text-align: center;
+}
+
 #lista-produtos,
 #produtos-selecionados {
   display: flex;
@@ -133,6 +156,20 @@ section h2 {
 }
 
 .produto button:hover {
+  background-color: var(--ink);
+}
+
+#form-compra button {
+  padding: 0.45rem 0.75rem;
+  color: var(--white);
+  background-color: var(--purple);
+  border: 0;
+  border-radius: 0.2rem;
+  cursor: pointer;
+  font: inherit;
+}
+
+#form-compra button:hover {
   background-color: var(--ink);
 }
 
