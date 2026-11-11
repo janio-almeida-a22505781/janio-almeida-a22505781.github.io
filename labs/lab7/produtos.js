@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars -- consumed by main.js as a browser script global
 const produtos = [
   {
     id: 1,

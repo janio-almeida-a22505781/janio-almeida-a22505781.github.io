@@ -1,5 +1,4 @@
 /* [BASE] Estilos partilhados pela página de índice e por todas as demos. */
-/* stylelint-disable no-descending-specificity */
 * {
   box-sizing: border-box;
 }

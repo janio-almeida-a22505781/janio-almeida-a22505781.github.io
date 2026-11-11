@@ -1,5 +1,3 @@
-/* Os links de navegação e de cada cartão têm estados hover intencionalmente distintos. */
-/* stylelint-disable no-descending-specificity */
 * {
   box-sizing: border-box;
 }

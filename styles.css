@@ -1,6 +1,4 @@
 :root {
-  /* Os seletores globais e de componentes têm níveis de especificidade intencionais. */
-  /* stylelint-disable no-descending-specificity */
   --ink: #14283d;
   --blue: #2c70d6;
   --sky: #eaf4ff;
